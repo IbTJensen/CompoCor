@@ -1,0 +1,13 @@
+Package: CompoCor
+Title: Compositionally Aware Estimation of Cross-correlations
+Version: 1.0.0.0000
+Authors@R: person("Ib Thorsgaard Jensen", email = "itj@math.aau.dk", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7245-8844"))
+Author: Ib Thorsgaard Jensen [aut, cre]
+Maintainer: Ib Thorsgaard Jensen <itj@math.aau.dk>
+Description: This package implements "Sparse Correlations of External Variables" (SparCEV), which estimates cross-correlations between compositional and non-compositional datasets and "Sparse Cross Correlations of Compositional Data" (SparXCC), which estimates cross-correlations between two compositional datasets. Both methods are designed with sequencing data (such as microbiome or transcriptomic data) in mind, but they are appropriate for any compositional datasets with the provided the correlation matrix is sparse.
+Imports:
+	parallel
+License: use_gpl3_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
