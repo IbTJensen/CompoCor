@@ -62,7 +62,7 @@ SparXCC_base_internal <- function(OTU.abn, gene.expr, pseudo_count = 1, var_min 
 #' calculated and returned. All correlations above m are likely to be real signals.
 #' @param B_m The number of bootstraps to use when calculating m. Only used when Find_m = TRUE.
 #' @param cores The number of cores used for finding m.
-#' @return A  matrix containing the correlations between the OTU abundances and gene expressions.
+#' @return A list that contains cor, cross-correlation between the OTU abundances and gene expressions, m, the dynamic permutation threshold, and cor_above_m, a logical matrix indicating whether the absoulte cross-correlation between the corresponding OTU and gene is above m.
 #' @export
 SparXCC_base <- function(OTU.abn, gene.expr, pseudo_count = 1, var_min = 1e-5,
                          Find_m = TRUE, B_m = 100, cores = 1){
@@ -114,7 +114,7 @@ SparXCC_base <- function(OTU.abn, gene.expr, pseudo_count = 1, var_min = 1e-5,
   
   out <- list(cor = rho, 
               m = m, 
-              Correlated = Correlated)
+              Cor_above_m = Correlated)
   
   return(out)
 }
